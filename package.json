@@ -1,7 +1,7 @@
 {
-  "name": "node-ts-super-plate",
+  "name": "stackoverflow-auth-microservice",
   "version": "1.0.0",
-  "description": "",
+  "description": "A nodejs service consuming the Stackoverflow API",
   "main": "index.js",
   "scripts": {
     "test": "mocha --config ./mocharc.jsonc",
