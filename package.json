@@ -21,9 +21,7 @@
     "module-alias": "^2.2.2",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
-    "passport-stack-exchange": "^1.0.0",
     "passport-stackapps-ts": "^1.0.3",
-    "types-passport-stack-exchange": "^1.0.0",
     "typescript-ioc": "^3.2.2"
   },
   "devDependencies": {
@@ -32,6 +30,7 @@
     "@types/express-session": "^1.17.4",
     "@types/mocha": "^8.2.0",
     "@types/passport": "^1.0.7",
+    "@types/passport-oauth2": "^1.4.11",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
     "chai": "^4.2.0",
