@@ -1,2 +1,3 @@
 export * from './greeter';
-export * from './auth';
+export * from './auth-controller';
+export * from './tags-controller';
