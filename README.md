@@ -4,7 +4,7 @@ A nodejs service consuming the Stackoverflow API
 
 ## Getting started
 
-`git clone https://github.com/PatrickNiyogitare28/node-ts-super-plate.git`
+`git clone https://github.com/knowbee/stackoverflow-auth-microservice.git`
 
 `cd node-boilerplate`
 
@@ -26,13 +26,13 @@ A nodejs service consuming the Stackoverflow API
 Building a production docker image
 ```sh
 $ docker build . -t <docker-username>/app-name
-# docker build . -t patrickniyo/stackoverflow-auth-microservice/
+# docker build . -t knowbee/stackoverflow-auth-microservice/
 ```
 
 Running the production docker image in a container
 ```sh
 $ docker run -p <app-port>:<localhost-port> [image-name or image-id]
-# docker run -p 5000:5000 patrickniyo/stackoverflow-auth-microservice/
+# docker run -p 5000:5000 knowbee/stackoverflow-auth-microservice/
 ```
 
 

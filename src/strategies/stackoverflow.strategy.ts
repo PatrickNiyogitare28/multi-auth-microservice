@@ -10,7 +10,7 @@ const STACKEXCHANGE_APPS_KEY = process.env.STACKEXCHANGE_APPS_KEY;
 passport.use(new Strategy({
     clientID: STACKEXCHANGE_CLIENT_ID,
     clientSecret: STACKEXCHANGE_CLIENT_SECRET,
-    callbackURL: 'http://127.0.0.1:5000/auth/stack-exchange/callback',
+    callbackURL: `http://${process.env.HOST}:${process.env.PORT}/auth/stack-exchange/callback`,
     stackAppsKey: STACKEXCHANGE_APPS_KEY,
     site: 'stackoverflow'
   },
