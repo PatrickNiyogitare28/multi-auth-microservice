@@ -1,5 +1,5 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-import passport from "../strategies/stackoverflow.strategy";
+import passport from "../../strategies/stackoverflow.strategy";
 import {Request, Response, NextFunction} from 'express';
 
 export const login = (req:Request, res: Response, next:NextFunction): any  => {

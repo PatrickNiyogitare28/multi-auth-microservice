@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
@@ -41,6 +42,7 @@
   },
   "_moduleAliases": {
     "@controllers": "dist/controllers",
-    "@service": "dist/service"
+    "@service": "dist/service",
+    "@utils": "dist/utils"
   }
 }
