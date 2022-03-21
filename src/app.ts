@@ -8,6 +8,7 @@ import passport from './strategies/stackoverflow.strategy';
 import AuthRouter from './routes/auth.routes';
 import {TagsRouter} from './routes/tags.router';
 import { UsersRouter } from './routes/users.router';
+import { TopicsRouter } from './routes/topics.router';
 import { User } from 'User';
 
 const app = express();
@@ -32,5 +33,6 @@ app.use('/api', greeterRouter);
 app.use(`${API_PREFIX}/auth`, AuthRouter);
 app.use(`${API_PREFIX}/tags`, TagsRouter);
 app.use(`${API_PREFIX}/users`, UsersRouter);
+app.use(`${API_PREFIX}/topics`, TopicsRouter);
 
 export default app;
