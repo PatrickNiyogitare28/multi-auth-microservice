@@ -2,6 +2,18 @@
 
 A nodejs service consuming the Stackoverflow API
 
+# Getting started with Stack Exchange API
+
+To be able to use the stackexchange api, one should have StackExchange credentials listed in the .env
+
+- STACKEXCHANGE_CLIENT_ID
+- STACKEXCHANGE_CLIENT_SECRET
+- STACKEXCHANGE_APPS_KEY
+
+To get the above credentials, signup on [StackExchange APi](https://api.stackexchange.com/)
+
+Read the [Stack Exchange App Setup Guid]() to be able to configure the app
+
 ## Getting started
 
 `git clone https://github.com/knowbee/stackoverflow-auth-microservice.git`
