@@ -31,6 +31,7 @@ For Application Icon is optional, let's leave it out.
 Refer to the image below, it's going to tell more.
 
 > Make sure you check the option **Enable Client Side OAuth Flow**
+
 > The description is also required make sure you add some description
 
 ![register stackexchange app](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/assets/register-app.png?raw=true)

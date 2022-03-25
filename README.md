@@ -12,7 +12,7 @@ To be able to use the stackexchange api, one should have StackExchange credentia
 
 To get the above credentials, signup on [StackExchange APi](https://api.stackexchange.com/)
 
-Read the [Stack Exchange App Setup Guid]() to be able to configure the app
+Read the [Stack Exchange App Setup Guid](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/STACK-EXCHANGE-APP-README.md) to be able to configure the app
 
 ## Getting started
 
