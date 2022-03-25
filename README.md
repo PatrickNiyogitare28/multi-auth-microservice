@@ -2,7 +2,7 @@
 
 A nodejs service consuming the Stackoverflow API
 
-# Getting started with Stack Exchange API
+## Getting started with Stack Exchange API
 
 To be able to use the stackexchange api, one should have StackExchange credentials listed in the .env
 
