@@ -4,8 +4,8 @@
   "description": "A nodejs service consuming the Stackoverflow API",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha --config ./mocharc.jsonc",
-    "start": "node ./dist",
+    "test": "mocha --config ./mocharc.jsonc",
+    "start": "node ./dist", 
     "start:dev": "nodemon ./src/index.ts",
     "build": "npm run clean && tsc -p tsconfig-build.json",
     "prestart": "npm run build",
