@@ -51,4 +51,7 @@ On this step you have all our [StackExchange] App credentials.
 - STACKEXCHANGE_APPS_KEY
 
 
+![credential access](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/assets/credential.png?raw=true)
+
+
 [StackExchange]: https://api.stackexchange.com/
