@@ -1,0 +1,1 @@
+export { FullTextSearchText } from './search-controller';

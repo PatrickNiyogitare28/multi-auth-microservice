@@ -1,1 +1,0 @@
-export { TopicsController } from './topics-controller';
