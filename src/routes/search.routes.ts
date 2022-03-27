@@ -1,24 +1,25 @@
 import { Router } from 'express';
-import { FullTextSearchText } from '../controllers';
+import { SearchController } from '../controllers';
 import { Container } from 'typescript-ioc';
 
 const router = Router();
-const fullTextSearch = Container.get(FullTextSearchText);
+const searchController = Container.get(SearchController);
+const {searchByFullText, searchBySingleTag, searchByTopicTitle, searchByUserId} = searchController;
 
 router.get('/full-text-search', (req, res) => {
-  fullTextSearch.searchByFullText(req, res);
+  searchByFullText(req, res);
 });
 
 router.get('/tags', (req, res) => {
-  fullTextSearch.searchBySingleTag(req, res);
+  searchBySingleTag(req, res);
 });
 
 router.get('/topics', (req, res) => {
-  fullTextSearch.searchByTopicTitle(req, res);
+  searchByTopicTitle(req, res);
 });
 
 router.get('/users/:id', (req, res) => {
-  fullTextSearch.searchByUserId(req, res);
+  searchByUserId(req, res);
 });
 
 export { router as searchRouter };

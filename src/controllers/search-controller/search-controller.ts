@@ -7,7 +7,7 @@ import { CustomResponse } from '../../utils/custom-response';
 import { EStatusCode } from '../../enums/EStatusCode';
 
 const {OK, BAD_REQUEST} = EStatusCode;
-export class FullTextSearchText {
+export class SearchController {
     private stackExchangeApiService: StackExchangeApiService;
     private query: string;
     constructor(@Inject stackExchangeApiService: StackExchangeApiService){

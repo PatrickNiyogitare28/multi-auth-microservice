@@ -1,1 +1,1 @@
-export { FullTextSearchText } from './search-controller';
+export { SearchController } from './search-controller';
