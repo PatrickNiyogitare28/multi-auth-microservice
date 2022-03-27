@@ -5,7 +5,7 @@ import { Container } from 'typescript-ioc';
 const router = Router();
 const fullTextSearch = Container.get(FullTextSearchText);
 
-router.get('/full-text', (req, res) => {
+router.get('/full-text-search', (req, res) => {
   fullTextSearch.searchByFullText(req, res);
 });
 
@@ -17,7 +17,7 @@ router.get('/topics', (req, res) => {
   fullTextSearch.searchByTopicTitle(req, res);
 });
 
-router.get('/users', (req, res) => {
+router.get('/users/:id', (req, res) => {
   fullTextSearch.searchByUserId(req, res);
 });
 
