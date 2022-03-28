@@ -1,1 +1,0 @@
-export { FullTextSearchText } from './full-text-search-controller';
