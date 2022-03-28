@@ -4,7 +4,7 @@
   "description": "A nodejs service consuming the Stackoverflow API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --config ./mocharc.jsonc",
+    "test": "mocha --config ./mocharc.jsonc --recursive  --exit --timeout 30000",
     "start": "node ./dist", 
     "start:dev": "nodemon ./src/index.ts",
     "build": "npm run clean && tsc -p tsconfig-build.json",
