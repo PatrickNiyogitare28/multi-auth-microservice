@@ -5,7 +5,7 @@ import express from 'express';
 import session from 'express-session';
 import passport from './strategies/stackoverflow.strategy';
 import AuthRouter from './routes/auth.routes';
-import { searchRouter } from './routes';
+import { SearchRouter } from './routes';
 import { User } from 'User';
 
 const app = express();
@@ -29,6 +29,6 @@ app.get('/', (req, res) => {
   return res.status(200).json({ message: 'Welcome to the Stackoverflow Microservice API' });
 });
 app.use(`${API_PREFIX}/auth`, AuthRouter);
-app.use(`${API_PREFIX}/search`, searchRouter);
+app.use(`${API_PREFIX}/search`, SearchRouter);
 
 export default app;
