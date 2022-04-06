@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --config ./mocharc.jsonc --recursive  --exit --timeout 30000",
-    "start": "node ./dist", 
+    "start": "node ./dist",
     "start:dev": "nodemon ./src/index.ts",
     "build": "npm run clean && tsc -p tsconfig-build.json",
     "prestart": "npm run build",
@@ -22,6 +22,7 @@
     "module-alias": "^2.2.2",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
+    "passport-github2": "^0.1.12",
     "passport-stackapps-ts": "^1.0.3",
     "typescript-ioc": "^3.2.2"
   },
@@ -31,6 +32,7 @@
     "@types/express-session": "^1.17.4",
     "@types/mocha": "^8.2.0",
     "@types/passport": "^1.0.7",
+    "@types/passport-github2": "^1.2.5",
     "@types/passport-oauth2": "^1.4.11",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",

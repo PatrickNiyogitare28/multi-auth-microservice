@@ -1,9 +1,9 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-import passport from "../../strategies/stackoverflow.strategy";
+import passport from "../../strategies/passport.strategy";
 import {Request, Response, NextFunction} from 'express';
 
-export const login = (req:Request, res: Response, next:NextFunction): any  => {
-    passport.authenticate('stack-exchange', function(err:any, user:any, info:any) {
+export const login = (req:any, res: Response, next:NextFunction): any  => {
+    passport.authenticate(req.passportStrategyType, function(err:any, user:any, info:any) {
         if (err) {
           return next(err);
         }

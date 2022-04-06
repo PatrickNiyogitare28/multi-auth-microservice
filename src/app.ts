@@ -3,8 +3,9 @@ import 'module-alias/register';
 import 'dotenv/config';
 import express from 'express';
 import session from 'express-session';
-import passport from './strategies/stackoverflow.strategy';
-import AuthRouter from './routes/auth.routes';
+import passport from './strategies/passport.strategy';
+import StackExchangeAuthRouter from './routes/stack-exchange-auth.routes';
+import GithubAuthRouter from './routes/github-auth.routes';
 import { SearchRouter } from './routes';
 import { User } from 'User';
 
@@ -28,7 +29,8 @@ app.use(passport.session());
 app.get('/', (req, res) => {
   return res.status(200).json({ message: 'Welcome to the Stackoverflow Microservice API' });
 });
-app.use(`${API_PREFIX}/auth`, AuthRouter);
+app.use(`${API_PREFIX}/auth/stack-exchange`, StackExchangeAuthRouter);
+app.use(`${API_PREFIX}/auth/github`, GithubAuthRouter);
 app.use(`${API_PREFIX}/search`, SearchRouter);
 
 export default app;
