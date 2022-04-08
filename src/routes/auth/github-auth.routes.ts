@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { GithubStrategyType } from '../middlewares/passport/passport-strategy-type';
-import { login, logout } from '../controllers/auth-controller';
-import passport from '../strategies/passport.strategy';
+import { GithubStrategyType } from '../../middlewares/passport/passport-strategy-type';
+import { login, logout } from '../../controllers/auth-controller';
+import passport from '../../strategies/passport.strategy';
 
 const router = Router();
 

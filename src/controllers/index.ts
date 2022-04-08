@@ -1,1 +1,2 @@
-export * from './search-controller';
+export * from './stack-exchange-search-controller';
+export * from './github-search-controller';
