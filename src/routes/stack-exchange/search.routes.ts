@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { SearchController } from '../controllers';
+import { StackExchangeSearchController } from '../../controllers';
 import { Container } from 'typescript-ioc';
 
 const router = Router();
-const searchController = Container.get(SearchController);
+const searchController = Container.get(StackExchangeSearchController);
 
 router.get('/tags', (req, res) => {
   searchController.searchBySingleTag(req, res);
@@ -21,4 +21,4 @@ router.get('/users/:id', (req, res) => {
   searchController.searchByUserId(req, res);
 });
 
-export { router as SearchRouter };
+export { router as StackExchangeSearchRouter };
