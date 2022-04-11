@@ -28,3 +28,18 @@ describe('GET api/v1/github/search/repositories', () => {
       });
   });
 });
+
+
+describe('GET api/v1/github/search/users', () => {
+  it('Should return the user with payload', (done) => {
+    chai
+      .request(App)
+      .get('/api/v1/github/search/users?username=yyx990803')
+      .end((err, response) => {
+        if (err) return done(err);
+        expect(response).to.have.status(200);
+        expect(response.body.data.items.length).greaterThanOrEqual(0);
+        return done();
+      });
+  });
+});
