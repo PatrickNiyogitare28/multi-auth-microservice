@@ -21,7 +21,7 @@ To be able to access the github api you need the bellow credentials
 GITHUB_CLIENT_ID
 GITHUB_CLIENT_SECRET
 
-Use the [this documentation guid]() to be able to create a github application and have the API credentials to use in the app
+Use the [this documentation guid](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/GITHUB-APP-README.md) to be able to create a github application and have the API credentials to use in the app
 ## Getting started
 
 `git clone https://github.com/knowbee/stackoverflow-auth-microservice.git`
