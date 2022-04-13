@@ -14,6 +14,14 @@ To get the above credentials, signup on [StackExchange APi](https://api.stackexc
 
 Read the [Stack Exchange App Setup Guid](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/STACK-EXCHANGE-APP-README.md) to be able to configure the app
 
+## Getting started with Github API
+
+To be able to access the github api you need the bellow credentials
+
+GITHUB_CLIENT_ID
+GITHUB_CLIENT_SECRET
+
+Use the [this documentation guid]() to be able to create a github application and have the API credentials to use in the app
 ## Getting started
 
 `git clone https://github.com/knowbee/stackoverflow-auth-microservice.git`
