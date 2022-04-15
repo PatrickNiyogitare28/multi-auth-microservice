@@ -12,4 +12,12 @@ router.get('/repository', (req, res) => {
 router.get('/users', (req, res) => {
   searchController.searchUserByUserName(req, res);
 });
+
+router.get('/issues', (req, res) => {
+  searchController.searchIssues(req, res);
+});
+
+router.get('/orgs/:organizationName', (req, res) => {
+  searchController.getOrganizationByOrgName(req, res);
+})
 export { router as GithubSearchRouter };

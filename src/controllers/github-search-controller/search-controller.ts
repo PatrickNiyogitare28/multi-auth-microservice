@@ -6,7 +6,7 @@ import { CustomResponse } from '../../utils/custom-response';
 import { EStatusCode } from '../../enums/EStatusCode';
 import { GithubService } from '../../service/github-service';
 
-const {OK, BAD_REQUEST} = EStatusCode;
+const {OK, BAD_REQUEST, NOT_FOUND} = EStatusCode;
 export class GithubSearchController {
     private githubService: GithubService;
     private query: string;
@@ -28,4 +28,22 @@ export class GithubSearchController {
         const data = await this.githubService.searchByQuery(this.query+`/users?q=${username}`);
         return res.status(OK).send(new CustomResponse(true, data));
      }
+
+     public async searchIssues(req: Request, res: Response): Promise<Response>{
+        const {q} = req.query;
+        if(!q) return res.status(BAD_REQUEST).send(new CustomResponse(false, {message: "Query is required"}));
+        const data = await this.githubService.searchByQuery(this.query+`/issues?q=${q}`);
+        return res.status(OK).send(new CustomResponse(true, data));
+     }
+
+     public async getOrganizationByOrgName(req: Request, res: Response): Promise<Response>{
+        const {organizationName} = req.params;
+        if(!organizationName) return res.status(BAD_REQUEST).send(new CustomResponse(false, {message: "Organization name is required"}));
+        const data = await this.githubService.searchByQuery(`${process.env.GITHUB_API}/orgs/${organizationName}`);
+        const jsonData = JSON.parse(JSON.stringify(data));
+        if(jsonData?.status === 404) return res.status(NOT_FOUND).send(new CustomResponse(false,  `Organization with name [${organizationName}] not found`))
+        return res.status(OK).send(new CustomResponse(true, data));
+     }
+
+
 }
