@@ -2,18 +2,16 @@ import { TCustomResponse } from "CustomResponse";
 
 export class CustomResponse {
     private success: boolean;
-    private data: Record<string , unknown>;
+    private data: Record<string , unknown> | string;
 
-    constructor (success: boolean, data: Record<string , unknown>){
+    constructor (success: boolean, data: Record<string , unknown> | string){
         this.success = success;
         this.data = data;
         this.makeResponse();
     }
-
     public makeResponse () : TCustomResponse {
-        return {
-          success: this.success,
-          data: this.data
-        };
+        let response = {success: this.success}
+        if(this.success) return {...response, data: this.data as Record<string, unknown>}
+        return {...response, message: this.data as string}
     }
 }

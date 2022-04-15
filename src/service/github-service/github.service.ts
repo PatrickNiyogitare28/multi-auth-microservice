@@ -10,8 +10,7 @@ export class GithubService {
             response = res?.data;
         }
         catch(e:any){
-            console.log(e.response);
-            return e?.response;
+            return e;
         }
         return response;
     }
