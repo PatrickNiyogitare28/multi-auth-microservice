@@ -1,14 +1,8 @@
 import { Router } from 'express';
-import { GithubStrategyType } from '../../middlewares/passport/passport-strategy-type';
-import { login, logout } from '../../controllers/auth-controller';
-import passport from '../../strategies/passport.strategy';
+import { getUserProfile } from '../../controllers/auth-controller';
 
 const router = Router();
 
-router.get('/',passport.authenticate('github'));
-
-router.get('/callback', GithubStrategyType,login);
-
-router.get('/logout', logout);
+router.get('/user', getUserProfile);
 
 export default router;
