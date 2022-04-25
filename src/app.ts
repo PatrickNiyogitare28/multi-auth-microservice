@@ -6,7 +6,7 @@ import session from 'express-session';
 import passport from './strategies/passport.strategy';
 import StackExchangeAuthRouter from './routes/auth/stack-exchange-auth.routes';
 import GithubAuthRouter from './routes/auth/github-auth.routes';
-import { StackExchangeSearchRouter, GithubSearchRouter} from './routes';
+import { StackExchangeSearchRouter, GithubSearchRouter, BitBucketRouter} from './routes';
 import { User } from 'User';
 
 const app = express();
@@ -33,5 +33,6 @@ app.use(`${API_PREFIX}/auth/stack-exchange`, StackExchangeAuthRouter);
 app.use(`${API_PREFIX}/auth/github`, GithubAuthRouter);
 app.use(`${API_PREFIX}/stack-exchange/search`, StackExchangeSearchRouter);
 app.use(`${API_PREFIX}/github/search`, GithubSearchRouter);
+app.use(`${API_PREFIX}/bitbucket/search`, BitBucketRouter);
 
 export default app;
