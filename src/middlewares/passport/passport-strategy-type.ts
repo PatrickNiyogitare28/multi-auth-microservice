@@ -9,3 +9,8 @@ export const StackExchangeStrategyType  = (req: any, _: Response, next: NextFunc
    req.passportStrategyType = 'stack-exchange';
    next();
 }
+
+export const AtlassianStrategyType  = (req: any, _: Response, next: NextFunction) => {
+   req.passportStrategyType = 'atlassian';
+   next();
+}
