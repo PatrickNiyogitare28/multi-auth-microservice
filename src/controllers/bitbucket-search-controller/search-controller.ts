@@ -19,7 +19,7 @@ export class BitBucketSearchController {
     const { username } = req.query;
     if (!username)
       return res.status(BAD_REQUEST).send(new CustomResponse(false, { message: 'user name is required' }));
-    const data = await this.bitbucketService.searchByQuery(this.query + `/repositories/${username}`, process.env.BITBUCKET_ACCESS_TOKEN);
+    const data = await this.bitbucketService.searchByQuery(this.query + `/repositories/${username}`, process.env.BITBUCKET_AUTH_TOKEN);
     return res.status(OK).send(new CustomResponse(true, data));
   }
 }
