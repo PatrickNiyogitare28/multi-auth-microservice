@@ -6,7 +6,10 @@ const router = Router();
 const searchController = Container.get(BitBucketSearchController);
 
 router.get('/repositories', (req, res) => {
-  searchController.searchRepositories(req, res);
+  searchController.searchUserRepositories(req, res);
 });
 
-export { router as BitBucketRouter };
+router.get('/workplace/:workplace/projects', (req, res) => {
+  searchController.searchWorkplaceRepositories(req, res);
+})
+export { router as BitBucketRouter }; 
