@@ -26,7 +26,7 @@ Use the [this documentation guid](https://github.com/knowbee/stackoverflow-auth-
 ## Getting started with Bitbucket API
 
 To access the bitbucket api. A bit bucket application credentials are required.
-Follow the guid on [here]() to create bitbucket app and generate a bitbucket credentials
+Follow the guid on [here](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/BITBUCKET-README.md) to create bitbucket app and generate a bitbucket credentials
 
 ## Getting started
 
