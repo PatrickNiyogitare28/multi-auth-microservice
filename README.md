@@ -22,6 +22,12 @@ GITHUB_CLIENT_ID
 GITHUB_CLIENT_SECRET
 
 Use the [this documentation guid](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/GITHUB-APP-README.md) to be able to create a github application and have the API credentials to use in the app
+
+## Getting started with Bitbucket API
+
+To access the bitbucket api. A bit bucket application credentials are required.
+Follow the guid on [here]() to create bitbucket app and generate a bitbucket credentials
+
 ## Getting started
 
 `git clone https://github.com/knowbee/stackoverflow-auth-microservice.git`
