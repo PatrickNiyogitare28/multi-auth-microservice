@@ -22,7 +22,9 @@
     "module-alias": "^2.2.2",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
+    "passport-atlassian-oauth2": "^2.1.0",
     "passport-github2": "^0.1.12",
+    "passport-oauth2": "^1.6.1",
     "passport-stackapps-ts": "^1.0.3",
     "typescript-ioc": "^3.2.2"
   },
