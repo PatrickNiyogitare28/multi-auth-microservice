@@ -12,4 +12,8 @@ router.get('/repositories', (req, res) => {
 router.get('/workplace/:workplace/projects', (req, res) => {
   searchController.searchWorkplaceRepositories(req, res);
 })
+
+router.get('/repositories/:workplace/:repoSlug/issues', (req, res) => {
+  searchController.searchWorkplaceRepositories(req, res);
+})
 export { router as BitBucketRouter }; 

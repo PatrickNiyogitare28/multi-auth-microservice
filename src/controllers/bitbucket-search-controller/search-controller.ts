@@ -30,5 +30,11 @@ export class BitBucketSearchController {
     const data = await this.bitbucketService.searchByQuery(this.query+`/workspaces/${workplace}/projects`, this.BITBUCKET_AUTH_TOKEN);
     return res.status(OK).send(new CustomResponse(true, data));
   }
+
+  public async searchIssues(req: Request, res: Response): Promise<Response> {
+    const {workspace, repoSlug} = req.params;
+    const data = await this.bitbucketService.searchByQuery(this.query+`/repositories/${workspace}/${repoSlug}/issues`);
+    return res.status(OK).send(new CustomResponse(true, data));
+  }
 }
 
