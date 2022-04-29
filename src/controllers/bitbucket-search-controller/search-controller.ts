@@ -25,15 +25,23 @@ export class BitBucketSearchController {
     return res.status(OK).send(new CustomResponse(true, data));
   }
 
-  public async searchWorkplaceRepositories(req: Request, res: Response): Promise<Response>{
-    const {workplace} = req.params;
-    const data = await this.bitbucketService.searchByQuery(this.query+`/workspaces/${workplace}/projects`, this.BITBUCKET_AUTH_TOKEN);
+  public async searchWorkSpaceRepositories(req: Request, res: Response): Promise<Response>{
+    const {workspace} = req.params;
+    const data = await this.bitbucketService.searchByQuery(this.query+`/workspaces/${workspace}/projects`, this.BITBUCKET_AUTH_TOKEN);
     return res.status(OK).send(new CustomResponse(true, data));
   }
 
   public async searchIssues(req: Request, res: Response): Promise<Response> {
     const {workspace, repoSlug} = req.params;
-    const data = await this.bitbucketService.searchByQuery(this.query+`/repositories/${workspace}/${repoSlug}/issues`);
+    const data = await this.bitbucketService.searchByQuery(this.query+`/repositories/${workspace}/${repoSlug}/issues`, this.BITBUCKET_AUTH_TOKEN);
+    return res.status(OK).send(new CustomResponse(true, data));
+  }
+
+  public async searchFileSource(req: Request, res: Response) : Promise<Response>{
+    const {workspace, repository} = req.params;
+    const {filePath} = req.query;
+    if(!filePath) return res.status(BAD_REQUEST).send(new CustomResponse(false, { message: 'File path is required'}));
+    const data = await this.bitbucketService.searchByQuery(this.query+`/repositories/${workspace}/${repository}/${filePath}`, this.BITBUCKET_AUTH_TOKEN);
     return res.status(OK).send(new CustomResponse(true, data));
   }
 }
