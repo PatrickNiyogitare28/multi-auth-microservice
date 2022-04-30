@@ -17,3 +17,45 @@ describe('GET api/v1/bitbucket/search/repositories?username=', () => {
       });
   });
 });
+
+describe('GET api/v1/bitbucket/search/workspace/degide/projects', () => {
+  it('Should return workspace projects', (done) => {
+    chai
+    .request(App)
+    .get('/api/v1/bitbucket/search/workspace/degide/projects')
+    .end((err, response) => {
+      if(err) return done(err);
+      expect(response).to.have.status(200);
+      expect(response.body).to.haveOwnProperty('data');
+      done();
+    })
+  })
+})
+
+describe('GET api/v1/bitbucket/search/repositories/atlassian/todo-app-custom-ui/issues', () => {
+  it('Should return workspace repository issues', (done) => {
+    chai
+    .request(App)
+    .get('/api/v1/bitbucket/search/repositories/atlassian/todo-app-custom-ui/issues')
+    .end((err, response) => {
+      if(err) return done(err);
+      expect(response).to.have.status(200);
+      expect(response.body).to.haveOwnProperty('data');
+      done();
+    })
+  })
+})
+
+describe('GET api/v1/bitbucket/search/file-source/atlassian/todo-app-custom-ui?filePath=src/master/README.md', () => {
+  it('Should return repository sources', (done) => {
+    chai
+    .request(App)
+    .get('/api/v1/bitbucket/search/file-source/atlassian/todo-app-custom-ui?filePath=src/master/README.md')
+    .end((err, response) => {
+      if(err) return done(err);
+      expect(response).to.have.status(200);
+      expect(response.body).to.haveOwnProperty('data');
+      done();
+    })
+  })
+})
