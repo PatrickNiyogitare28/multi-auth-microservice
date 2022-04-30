@@ -10,7 +10,7 @@ describe('GET api/v1/github/search/repositories', () => {
     chai
       .request(App)
       .get('/api/v1/github/search/repository?name=gerand-backend')
-      .set('Authorization', `${ACCESS_TOKEN}`)
+      .set('authorization', `${ACCESS_TOKEN}`)
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(200);
@@ -22,7 +22,7 @@ describe('GET api/v1/github/search/repositories', () => {
     chai
       .request(App)
       .get('/api/v1/github/search/repository')
-      .set('Authorization', `${ACCESS_TOKEN}`)
+      .set('authorization', `${ACCESS_TOKEN}`)
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(400);
@@ -36,7 +36,7 @@ describe('GET api/v1/github/search/users', () => {
     chai
       .request(App)
       .get('/api/v1/github/search/users?username=yyx990803')
-      .set('Authorization', `${ACCESS_TOKEN}`)
+      .set('authorization', `${ACCESS_TOKEN}`)
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(200);
@@ -51,7 +51,7 @@ describe('GET api/v1/github/orgs/:organizationName', () => {
     chai
       .request(App)
       .get('/api/v1/github/search/orgs/atlp-rwanda-n')
-      .set('Authorization', `${ACCESS_TOKEN}`)
+      .set('authorization', `${ACCESS_TOKEN}`)
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(404);
@@ -62,7 +62,7 @@ describe('GET api/v1/github/orgs/:organizationName', () => {
     chai
       .request(App)
       .get('/api/v1/github/search/orgs/atlp-rwanda')
-      .set('Authorization', `${ACCESS_TOKEN}`)
+      .set('authorization', `${ACCESS_TOKEN}`)
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(200);
@@ -76,7 +76,7 @@ describe('GET api/v1/github/issues?q', () => {
     chai
       .request(App)
       .get('/api/v1/github/search/issues?q=Unable to compile typescript')
-      .set('Authorization', `${ACCESS_TOKEN}`)
+      .set('authorization', `${ACCESS_TOKEN}`)
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(200);

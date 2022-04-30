@@ -18,6 +18,7 @@ export class GithubSearchController {
   public async searchRepository(req: Request, res: Response): Promise<Response> {
     const { name } = req.query;
     const { authorization } = req.headers;
+    console.log(authorization)
 
     if (!name)
       return res.status(BAD_REQUEST).send(new CustomResponse(false, { message: 'Repository name is required' }));
