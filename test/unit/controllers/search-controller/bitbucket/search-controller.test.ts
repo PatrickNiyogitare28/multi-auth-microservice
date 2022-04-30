@@ -8,7 +8,7 @@ describe('GET api/v1/bitbucket/search/repositories?username=', () => {
   it('Should return data list on successfully search user repositories', (done) => {
     chai
       .request(App)
-      .get('http://localhost:5000/api/v1/bitbucket/search/repositories?username=degide')
+      .get('/api/v1/bitbucket/search/repositories?username=degide')
       .end((err, response) => {
         if (err) return done(err);
         expect(response).to.have.status(200);
