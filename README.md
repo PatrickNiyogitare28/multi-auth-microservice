@@ -12,7 +12,7 @@ To be able to use the stackexchange api, one should have StackExchange credentia
 
 To get the above credentials, signup on [StackExchange APi](https://api.stackexchange.com/)
 
-Read the [Stack Exchange App Setup Guid](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/STACK-EXCHANGE-APP-README.md) to be able to configure the app
+Read the [Stack Exchange App Setup Guid](https://github.com/PatrickNiyogitare28/multi-auth-microservice/blob/master/docs/guides/STACK-EXCHANGE-APP-README.md) to be able to configure the app
 
 ## Getting started with Github API
 
@@ -21,12 +21,12 @@ To be able to access the github api you need the bellow credentials
 GITHUB_CLIENT_ID
 GITHUB_CLIENT_SECRET
 
-Use the [this documentation guid](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/GITHUB-APP-README.md) to be able to create a github application and have the API credentials to use in the app
+Use the [this documentation guid](https://github.com/PatrickNiyogitare28/multi-auth-microservice/blob/master/docs/guides/GITHUB-APP-README.md) to be able to create a github application and have the API credentials to use in the app
 
 ## Getting started with Bitbucket API
 
 To access the bitbucket api. A bit bucket application credentials are required.
-Follow the guid on [here](https://github.com/knowbee/stackoverflow-auth-microservice/blob/master/docs/guides/BITBUCKET-README.md) to create bitbucket app and generate a bitbucket credentials
+Follow the guide on [here](https://github.com/PatrickNiyogitare28/multi-auth-microservice/blob/master/docs/guides/BITBUCKET-README.md) to create bitbucket app and generate a bitbucket credentials
 
 ## Getting started
 
