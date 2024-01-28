@@ -30,7 +30,7 @@ Follow the guide on [here](https://github.com/PatrickNiyogitare28/multi-auth-mic
 
 ## Getting started
 
-`git clone https://github.com/knowbee/stackoverflow-auth-microservice.git`
+`git clone https://github.com/PatrickNiyogitare28/multi-auth-microservice.git`
 
 `cd node-boilerplate`
 
@@ -52,13 +52,13 @@ Follow the guide on [here](https://github.com/PatrickNiyogitare28/multi-auth-mic
 Building a production docker image
 ```sh
 $ docker build . -t <docker-username>/app-name
-# docker build . -t knowbee/stackoverflow-auth-microservice/
+# docker build . -t PatrickNiyogitare28/multi-auth-microservice
 ```
 
 Running the production docker image in a container
 ```sh
 $ docker run -p <app-port>:<localhost-port> [image-name or image-id]
-# docker run -p 5000:5000 knowbee/stackoverflow-auth-microservice/
+# docker run -p 5000:5000 PatrickNiyogitare28/multi-auth-microservice
 ```
 
 
